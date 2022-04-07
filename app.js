@@ -19,6 +19,12 @@ const newSchema = new mongoose.Schema({
     email: {
         type: String
     },
+    twitter: {
+        type: String
+    },
+    tg_username: {
+        type: String
+    },
     wallet: {
         type: String
     },
@@ -47,6 +53,8 @@ app.get("/",async (req,res)=>{
                 <td>${data.username}<td/>
                 <td>${data.name}<td/>
                 <td>${data.email}<td/>
+                <td>${data.twitter}<td/>
+                <td>${data.tg_username}<td/>
                 <td>${data.wallet}<td/>
                 <td>${data.balance}<td/>
                 <td>${data.date}<td/>
@@ -100,6 +108,8 @@ app.get("/",async (req,res)=>{
         <th>Username<th/>
         <th>Name<th/>
         <th>Email<th/>
+        <th>Twitter<th/>
+        <th>Telegram Username<th/>
         <th>Wallet<th/>
         <th>Balance<th/>
         <th>Join Date<th/>
